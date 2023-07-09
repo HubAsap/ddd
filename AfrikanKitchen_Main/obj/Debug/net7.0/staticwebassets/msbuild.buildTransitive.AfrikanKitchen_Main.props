@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AfrikanKitchen_Main.props" />
+</Project>
