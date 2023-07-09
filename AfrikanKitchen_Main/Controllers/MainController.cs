@@ -70,12 +70,14 @@ namespace AfrikanKitchen_Main.Controllers
                 {
                     switch (usertype.ToLower())
                     {
+                        //Username is always saved in lower case
                         case "customers":
-                            Update_To_MySql.UpdateProfileForCustomers(uuid: uuid, name: name, image: image);
+                            Update_To_MySql.UpdateProfileForCustomers(uuid: uuid, name: name.ToLower(), image: image);
                             break;
 
+                        //Business name or store nam is always saved in lower case
                         case "partners":
-                            Update_To_MySql.UpdateProfileForPartners(uuid: uuid, businessname: name, tagline: tagline, companylogo: image, showlogooninvoice: showlogooninvoice, showlogoonemail: showlogoonemail);
+                            Update_To_MySql.UpdateProfileForPartners(uuid: uuid, businessname: name.ToLower(), tagline: tagline, companylogo: image, showlogooninvoice: showlogooninvoice, showlogoonemail: showlogoonemail);
                             break;
                     }
 
